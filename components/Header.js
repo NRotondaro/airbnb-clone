@@ -8,7 +8,7 @@ import {
 
 export const Header = () => {
   return (
-    <header className='sticky top-0 z-50 grid grid-cols-3 items-center shadow-md p-5 md:px-10'>
+    <header className='sticky bg-white top-0 z-50 grid grid-cols-3 items-center shadow-md p-5 md:px-10'>
       <div className='relative items-center h-10 cursor-pointer'>
         <Image
           alt='logo'
