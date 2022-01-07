@@ -3,10 +3,13 @@ import {
   SearchIcon,
   GlobeAltIcon,
   MenuIcon,
-  UsersIcon,
+  UserCircleIcon,
 } from '@heroicons/react/solid';
+import { useState } from 'react';
 
 export const Header = () => {
+  const [searchInput, setSearchInput] = useState('');
+
   return (
     <header className='sticky bg-white top-0 z-50 grid grid-cols-3 items-center shadow-md p-5 md:px-10'>
       <div className='relative items-center h-10 cursor-pointer'>
@@ -20,6 +23,8 @@ export const Header = () => {
       </div>
       <div className='flex items-center md:border-2 rounded-full py-2 md:shadow-sm'>
         <input
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           className='flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400'
           type='text'
           placeholder='Start your search'
@@ -31,9 +36,11 @@ export const Header = () => {
         <GlobeAltIcon className='h-6 cursor-pointer' />
         <div className='flex items-center space-x-2 p-2 border-2 rounded-full'>
           <MenuIcon className='h-6 cursor-pointer' />
-          <UsersIcon className='h-6 cursor-pointer' />
+          <UserCircleIcon className='h-6 cursor-pointer' />
         </div>
       </div>
+
+      {searchInput && <h1>Hello World</h1>}
     </header>
   );
 };
