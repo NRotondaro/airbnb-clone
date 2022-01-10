@@ -3,6 +3,7 @@ import {
   SearchIcon,
   GlobeAltIcon,
   MenuIcon,
+  UsersIcon,
   UserCircleIcon,
 } from '@heroicons/react/solid';
 import { useState } from 'react';
@@ -12,19 +13,23 @@ import 'react-date-range/dist/theme/default.css';
 
 export const Header = () => {
   const [searchInput, setSearchInput] = useState('');
-
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
+
+  const selectionRange = {
+    startDate: startDate,
+    endDate: endDate,
+    key: 'selection',
+  };
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
   };
 
-  const selectionRange = {
-    startDate: startDate,
-    endDate: endDate,
-    key: 'selection',
+  const resetInput = () => {
+    setSearchInput('');
   };
 
   return (
@@ -49,7 +54,9 @@ export const Header = () => {
         <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2' />
       </div>
       <div className='flex items-center space-x-4 justify-end text-gray-500'>
-        <p className='hidden md:inline cursor-pointer'>Become a host</p>
+        <p className='hidden md:inline text-center cursor-pointer'>
+          Become a host
+        </p>
         <GlobeAltIcon className='h-6 cursor-pointer' />
         <div className='flex items-center space-x-2 p-2 border-2 rounded-full'>
           <MenuIcon className='h-6 cursor-pointer' />
@@ -65,6 +72,26 @@ export const Header = () => {
             rangeColors={['#FD5B61']}
             onChange={handleSelect}
           />
+          <div className='flex items-center border-b mb-4'>
+            <h2 className='text-2xl flex-grow font-semibold'>
+              Number of Guests
+            </h2>
+
+            <UsersIcon className='h-5' />
+            <input
+              min={1}
+              type='number'
+              value={numberOfGuests}
+              onChange={(e) => setNumberOfGuests(e.target.value)}
+              className='w-12 pl-2 text-lg text-red-400 outline-none'
+            />
+          </div>
+          <div className='flex justify-around'>
+            <button className='text-gray-500' onClick={resetInput}>
+              Cancel
+            </button>
+            <button className='text-red-400'>Search</button>
+          </div>
         </div>
       )}
     </header>
