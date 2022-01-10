@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className='grid grid-cols-1 sm:grid-cols-4 gap-y-10 px-32 py-14 bg-gray-100'>
       <div className='px-2 space-y-4 text-xs text-gray-800'>
@@ -37,4 +37,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};

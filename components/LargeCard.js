@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-export function LargeCard({ img, title, description, buttonText }) {
+export const LargeCard = ({ img, title, description, buttonText }) => {
   return (
     <section className='relative py-16'>
       <div className='relative h-96 min-w-[300px] cursor-pointer'>
@@ -23,4 +23,4 @@ export function LargeCard({ img, title, description, buttonText }) {
       </div>
     </section>
   );
-}
+};
