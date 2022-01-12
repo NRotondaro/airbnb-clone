@@ -1,16 +1,20 @@
 import { useRouter } from 'next/dist/client/router';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { InfoCard } from '../components/InfoCard';
 import { format } from 'date-fns';
 
-export default function Search() {
+export default function Search({ searchResults }) {
   const router = useRouter();
+
+  console.log(searchResults);
 
   const { location, startDate, endDate, numberOfGuests } = router.query;
   const formattedStartDate = format(new Date(startDate), 'dd MMM yy');
   const formattedEndDate = format(new Date(endDate), 'dd MMM yy');
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
+  console.log(searchResults);
   return (
     <div>
       <Header placeholder={`${location} | ${range} ${numberOfGuests} guests`} />
@@ -29,9 +33,37 @@ export default function Search() {
             <p className='button'>Rooms and Beds</p>
             <p className='button'>More filters</p>
           </div>
+          <div className='flex flex-col'>
+            {searchResults.map(
+              ({ img, location, title, description, star, price, total }) => (
+                <InfoCard
+                  key={img}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const searchResults = await fetch('https://jsonkeeper.com/b/5NPS').then(
+    (res) => res.json()
+  );
+
+  return {
+    props: {
+      searchResults,
+    },
+  };
 }
