@@ -7,14 +7,11 @@ import { format } from 'date-fns';
 export default function Search({ searchResults }) {
   const router = useRouter();
 
-  console.log(searchResults);
-
   const { location, startDate, endDate, numberOfGuests } = router.query;
   const formattedStartDate = format(new Date(startDate), 'dd MMM yy');
   const formattedEndDate = format(new Date(endDate), 'dd MMM yy');
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-  console.log(searchResults);
   return (
     <div>
       <Header placeholder={`${location} | ${range} ${numberOfGuests} guests`} />
