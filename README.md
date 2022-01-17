@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="logo-studion" title="Studion" src="./public/logo.png" />
+</h1>
 
-## Getting Started
+<p align="center">
+  <a href="#-techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to">How to</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="center">
+  <img alt="banner-studion" src="./public/banner.png" width="100%">
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Techs
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project is made using:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [React](https://reactjs.org)
+- [NextJS](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [HeroIcons](https://heroicons.com/)
+- [MapBox](https://www.mapbox.com/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 💻 About
 
-## Learn More
+Airbnb is a clone of a marketplace for homestays 
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 How to
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Clone the repository
+- Install packages with `yarn` or `npm install`
+- Run `yarn dev` or `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Now you can access [`localhost:3000`](http://localhost:3000)
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+👤 **Nikson Rotondaro**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website: https://github.com/NRotondaro
+- Twitter: [https:\/\/twitter.com\/NoskinR](https://twitter.com/NoskinR)
+- Github: [@NRotondaro](https://github.com/NRotondaro)
+- LinkedIn: [https:\/\/www.linkedin.com\/in\/nikson-rotondaro\/](https://www.linkedin.com/in/nikson-rotondaro/)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
