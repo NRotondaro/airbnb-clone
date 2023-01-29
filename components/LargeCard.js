@@ -5,13 +5,7 @@ export const LargeCard = ({ img, title, description, buttonText }) => {
   return (
     <section className='relative py-16'>
       <div className='relative h-96 min-w-[300px] cursor-pointer'>
-        <Image
-          className='rounded-2xl'
-          alt='large-card'
-          src={img}
-          layout='fill'
-          objectFit='cover'
-        />
+        <Image className='rounded-2xl' alt='large-card' src={img} layout='fill' objectFit='cover' />
       </div>
       <div className='absolute top-32 left-12'>
         <h3 className='text-4xl mb-3 w-64'>{title}</h3>

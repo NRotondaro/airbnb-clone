@@ -26,7 +26,7 @@ This project is made using:
 
 ## 💻 About
 
-Airbnb is a clone of a marketplace for homestays 
+Airbnb is a clone of a marketplace for homestays
 
 ## 🚀 How to
 

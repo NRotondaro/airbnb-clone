@@ -25,22 +25,15 @@ export const Map = ({ searchResults }) => {
       mapStyle='mapbox://styles/niksonr/ckycwtfhk1vrh14nxzeiryn4p'
       mapboxApiAccessToken={process.env.mapbox_key}
       {...viewport}
-      onViewportChange={(nextViewport) => setViewport(nextViewport)}
-    >
+      onViewportChange={(nextViewport) => setViewport(nextViewport)}>
       {searchResults.map((result) => (
         <div key={result.long}>
-          <Marker
-            longitude={result.long}
-            latitude={result.lat}
-            offsetLeft={-20}
-            offsetTop={-10}
-          >
+          <Marker longitude={result.long} latitude={result.lat} offsetLeft={-20} offsetTop={-10}>
             <p
               role='img'
               onClick={() => setSelectedLocation(result)}
               className='cursor-pointer text-2xl animate-bounce'
-              aria-label='push-pin'
-            >
+              aria-label='push-pin'>
               📌
             </p>
           </Marker>
@@ -50,8 +43,7 @@ export const Map = ({ searchResults }) => {
               onClose={() => setSelectedLocation()}
               closeOnClick={true}
               latitude={result.lat}
-              longitude={result.long}
-            >
+              longitude={result.long}>
               {result.title}
             </Popup>
           ) : (
